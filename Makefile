@@ -10,7 +10,7 @@ all: exec
 
 init:
 	cp .env.dev.sample .env.dev
-	docker volume create --name=app_sync_volume
+	docker volume create --name=taskleaf_sync_volume
 	docker-sync start
 	docker-compose build
 	docker-compose run --rm app bundle exec rails new . --force --database=mysql --skip-turbolinks --skip-git --skip-test

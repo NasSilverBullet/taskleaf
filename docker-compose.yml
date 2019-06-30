@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env.dev
     volumes:
-      - app_sync_volume:/app
+      - taskleaf_sync_volume:/app
     volumes_from:
       - data
     ports:
@@ -36,5 +36,5 @@ volumes:
     driver: local
   bundle:
     driver: local
-  app_sync_volume:
+  taskleaf_sync_volume:
     external: true
