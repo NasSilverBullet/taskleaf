@@ -5,7 +5,8 @@ class TasksController < ApplicationController
   def show
   end
 
-  def nex
+  def new
+    @task = Task.new
   end
 
   def edit
