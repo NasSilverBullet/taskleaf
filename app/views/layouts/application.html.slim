@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title
+      | App
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
+      .navbar-brand Taskleaf
+    .container
+    = yield
